@@ -35,5 +35,10 @@ namespace WindowsFormsApplication2
             f2.Show();
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
