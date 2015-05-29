@@ -23,6 +23,20 @@ namespace WindowsFormsApplication2
         
         private void bt_ingresar_login_Click(object sender, EventArgs e)
         {
+            if (txt_usuario.Text == "")
+            {
+
+                MessageBox.Show("Debe ingresar un loguin");
+                return;
+            }
+
+            if (txt_contraseña.Text == "")
+            {
+
+                MessageBox.Show("Debe ingresar una contraseña");
+                return;
+            }
+
             Usuarios usuarioOB = new Usuarios();
             usuarioOB.Usuario = this.txt_usuario.Text;
             usuarioOB.Contraseña = this.txt_contraseña.Text;

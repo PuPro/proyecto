@@ -22,7 +22,19 @@ namespace WindowsFormsApplication2
 
         private void bt_ingresar_administracion_Click(object sender, EventArgs e)
         {
+            if (txt_usuarioAdministracion.Text == "")
+            {
 
+                MessageBox.Show("Debe ingresar un loguin");
+                return;
+            }
+
+            if (txt_contraseñaAdmonistracion.Text == "")
+            {
+
+                MessageBox.Show("Debe ingresar una contraseña");
+                return;
+            }
 
             UsuarioAdmin usuarioOB = new UsuarioAdmin();
             usuarioOB.Usuario = this.txt_usuarioAdministracion.Text;
