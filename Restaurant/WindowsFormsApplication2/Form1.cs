@@ -19,7 +19,7 @@ namespace WindowsFormsApplication2
 
             cmb_provedorProductos();
             cmb_vendedorVentas();
-
+            stock_producto();
 
         }
 
@@ -756,7 +756,24 @@ namespace WindowsFormsApplication2
         }
 
 
+        public void stock_producto()
+        {
+          
+            SqlConnection CN = new SqlConnection();
+            CN.ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=ElfmanStrauss;Integrated Security=True";
+            DataTable dt = new DataTable();
+            CN.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("select nombre, stock from producto where stock <= 10", CN);
+            sda.Fill(dt);
+            MessageBox.Show(dt.Rows[0][0].ToString()+ " " + dt.Rows[0][1].ToString());
+            CN.Close();
 
+
+
+
+
+
+        }
 
 
 
