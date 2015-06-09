@@ -287,7 +287,7 @@ namespace WindowsFormsApplication2
             //se declara una variable de tipo SqlConnection
             SqlConnection conexion = new SqlConnection();
             //se indica la cadena de conexion
-            conexion.ConnectionString = @"Data Source=VAMPER-PC\SQLEXPRESS;Initial Catalog=ElfmanStrauss;Integrated Security=True";
+            conexion.ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=ElfmanStrauss;Integrated Security=True";
             //código para llenar el comboBox
             DataSet ds = new DataSet();
             //indicamos la consulta en SQL
@@ -462,7 +462,7 @@ namespace WindowsFormsApplication2
 
             SqlConnection conexion = new SqlConnection();
 
-            conexion.ConnectionString = @"Data Source=VAMPER-PC\SQLEXPRESS;Initial Catalog=ElfmanStrauss;Integrated Security=True";
+            conexion.ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=ElfmanStrauss;Integrated Security=True";
 
             string consulta = "SELECT ID_cliente, nombre, apellido FROM clientes WHERE rut= @rut"; //consulta
 
@@ -506,7 +506,7 @@ namespace WindowsFormsApplication2
             //se declara una variable de tipo SqlConnection
             SqlConnection conexion = new SqlConnection();
             //se indica la cadena de conexion
-            conexion.ConnectionString = @"Data Source=VAMPER-PC\SQLEXPRESS;Initial Catalog=ElfmanStrauss;Integrated Security=True";
+            conexion.ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=ElfmanStrauss;Integrated Security=True";
             //código para llenar el comboBox
             DataSet ds = new DataSet();
             //indicamos la consulta en SQL
@@ -527,7 +527,7 @@ namespace WindowsFormsApplication2
 
             SqlConnection conexion = new SqlConnection();
 
-            conexion.ConnectionString = @"Data Source=VAMPER-PC\SQLEXPRESS;Initial Catalog=ElfmanStrauss;Integrated Security=True";
+            conexion.ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=ElfmanStrauss;Integrated Security=True";
 
             string consulta = "SELECT ID_usuario, nombre, rut FROM usuario WHERE rut= @rut"; //consulta
 

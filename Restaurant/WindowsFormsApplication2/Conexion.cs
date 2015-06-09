@@ -43,7 +43,7 @@ namespace WindowsFormsApplication2
     }
  partial class General {
 
-     public static string Server = @"VAMPER-PC\SQLEXPRESS";
+     public static string Server = @".\SQLEXPRESS";
      public static string DataBase = "ElfmanStrauss";
         public static string User = "";
         public static string Pass = "";

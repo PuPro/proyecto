@@ -20,7 +20,7 @@ namespace WindowsFormsApplication2
         public ConexionLoguin()
         {
 
-            this.cadenaconexcion = (@"Data Source=VAMPER-PC\SQLEXPRESS;Initial Catalog=ElfmanStrauss;Integrated Security=True");
+            this.cadenaconexcion = (@"Data Source=.\SQLEXPRESS;Initial Catalog=ElfmanStrauss;Integrated Security=True");
             this.cnn = new SqlConnection(this.cadenaconexcion);
         }
 
