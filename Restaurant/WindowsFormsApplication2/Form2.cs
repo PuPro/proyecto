@@ -36,17 +36,20 @@ namespace WindowsFormsApplication2
                 MessageBox.Show("Debe ingresar una contraseña");
                 return;
             }
-
+                
             Usuarios usuarioOB = new Usuarios();
             usuarioOB.Usuario = this.txt_usuario.Text;
             usuarioOB.Contraseña = this.txt_contraseña.Text;
 
 
-
+                
+                
 
 
             if (usuarioOB.buscar() == true)
             {
+
+                
 
                  MessageBox.Show(usuarioOB.Mensaje, "Loguin...");
 
@@ -67,7 +70,6 @@ namespace WindowsFormsApplication2
             
             if (cerrar == 1){
 
-           
 
                 this.Close();
 
@@ -96,8 +98,14 @@ namespace WindowsFormsApplication2
 
         }
 
+   
+        
+                
+           
+        
+        
 
-       
+        
        
         
         

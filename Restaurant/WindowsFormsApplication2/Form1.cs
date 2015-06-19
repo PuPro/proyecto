@@ -17,11 +17,12 @@ namespace WindowsFormsApplication2
         public Form1()
         {
             InitializeComponent();
-
             cmb_provedorProductos();
             cmb_vendedorVentas();
             stock_producto();
 
+
+            
         }
 
         private void groupBox9_Enter(object sender, EventArgs e)
@@ -769,8 +770,8 @@ namespace WindowsFormsApplication2
             sda1.Fill(dt);
             SqlDataAdapter sda2 = new SqlDataAdapter("select COUNT (*) from producto where stock <= 10", CN);
             sda2.Fill(dt2);
-            SqlDataAdapter sda3 = new SqlDataAdapter("select nombre, apellido from usuario where usuario = " + dato , CN);
-            sda2.Fill(dt3);
+            SqlDataAdapter sda3 = new SqlDataAdapter("select nombre, apellido from usuario where usuario = 'arubio'" , CN);
+            sda3.Fill(dt3);
 
 
             string lista = " ";
@@ -785,30 +786,28 @@ namespace WindowsFormsApplication2
             MessageBox.Show(lista, "QUEDA POCO STOCK ", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
+
+            string dato = lbl_usser.Text;
             string hora;
             string fechas;
-            string nombre;
+            string nombre = " ";
 
             hora = DateTime.Now.ToString("dd/MM/yyyy");
             fechas = DateTime.Now.ToString("hh:mm:ss");
-            nombre = Convert.ToString(dt3.Rows[0][0] + " " + dt3.Rows[0][1]);
+            nombre += dt3.Rows[0][0].ToString() + " " + dt3.Rows[0][1].ToString();
 
             Gestion reporte = new Gestion();
-            reporte.agregar_reporte(hora, fechas, nombre);
+            reporte.agregar_reporte(fechas, hora, nombre);
 
-
+            
 
         }
 
+      
 
+            
 
-
-        public  form2 (string txt_usuario.Tex)
-        {
-        String recibo= txt_usuario.Tex;
-        InitializeComponent();
-
-           }
+        
 
 
 

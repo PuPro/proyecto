@@ -140,7 +140,7 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.lbl_user = new System.Windows.Forms.Label();
+            this.lbl_usser = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -181,7 +181,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.DarkRed;
-            this.tabPage1.Controls.Add(this.lbl_user);
+            this.tabPage1.Controls.Add(this.lbl_usser);
             this.tabPage1.Controls.Add(this.BT_SALIR);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
@@ -1342,14 +1342,14 @@
             this.label30.TabIndex = 5;
             this.label30.Text = "CIUDAD";
             // 
-            // lbl_user
+            // lbl_usser
             // 
-            this.lbl_user.AutoSize = true;
-            this.lbl_user.Location = new System.Drawing.Point(8, 16);
-            this.lbl_user.Name = "lbl_user";
-            this.lbl_user.Size = new System.Drawing.Size(41, 13);
-            this.lbl_user.TabIndex = 1;
-            this.lbl_user.Text = "label18";
+            this.lbl_usser.AutoSize = true;
+            this.lbl_usser.Location = new System.Drawing.Point(286, 19);
+            this.lbl_usser.Name = "lbl_usser";
+            this.lbl_usser.Size = new System.Drawing.Size(41, 13);
+            this.lbl_usser.TabIndex = 5;
+            this.lbl_usser.Text = "usuario";
             // 
             // Form1
             // 
@@ -1510,7 +1510,7 @@
         private System.Windows.Forms.Button bt_salir1;
         private System.Windows.Forms.Button bt_salir2;
         private System.Windows.Forms.Button bt_salir3;
-        public System.Windows.Forms.Label lbl_user;
+        public System.Windows.Forms.Label lbl_usser;
     }
 }
 
