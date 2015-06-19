@@ -422,5 +422,42 @@ namespace WindowsFormsApplication2
         }
 
 
+  //-----------------------------------------------------------------------------------------------------
+
+        //agregar reporte a la base de datos
+        public int agregar_reporte(string hora, string fecha, string usuario)
+        {
+
+
+            try
+            {
+                connBD.CrearConexion(General.Server, General.DataBase, General.User, General.Pass);
+                SqlCommand cmd = new SqlCommand("agregar_reporte", connBD.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                // agregar parametros que recibe como string
+
+
+
+                cmd.Parameters.AddWithValue("@hora", hora);
+                cmd.Parameters.AddWithValue("@fecha", fecha);
+                cmd.Parameters.AddWithValue("@usuario", usuario);
+             
+
+
+
+                cmd.ExecuteNonQuery();
+                connBD.con.Close();
+                return 1;
+            }
+            catch (Exception)
+            {
+
+                return -1;
+            }
+        }
+
+
+
     }
 }

@@ -41,9 +41,12 @@ namespace WindowsFormsApplication2
             usuarioOB.Usuario = this.txt_usuario.Text;
             usuarioOB.Contraseña = this.txt_contraseña.Text;
 
+
+
+
+
             if (usuarioOB.buscar() == true)
             {
-            
 
                  MessageBox.Show(usuarioOB.Mensaje, "Loguin...");
 
@@ -54,8 +57,8 @@ namespace WindowsFormsApplication2
             {
 
                 MessageBox.Show(usuarioOB.Mensaje, "ERROR...");
-                
 
+                
                 cerrar = 0;
 
 
@@ -63,6 +66,8 @@ namespace WindowsFormsApplication2
 
             
             if (cerrar == 1){
+
+           
 
                 this.Close();
 
@@ -93,6 +98,15 @@ namespace WindowsFormsApplication2
 
 
        
+       
+        
+        
+        
+     
+         
+
+         
+         
 
 
 
@@ -102,6 +116,5 @@ namespace WindowsFormsApplication2
 
 
 
-
-    }
+        }
 }

@@ -30,15 +30,18 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.BT_SALIR = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgv_Clinete = new System.Windows.Forms.DataGridView();
             this.txt_buscarCliente = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bt_ModificarCliente = new System.Windows.Forms.Button();
             this.txt_numeroCasaCliente = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dTime_Cliente = new System.Windows.Forms.DateTimePicker();
+            this.bt_guardarCliente = new System.Windows.Forms.Button();
             this.txt_rutCliente = new System.Windows.Forms.TextBox();
             this.txt_direccionCliente = new System.Windows.Forms.TextBox();
             this.txt_ciudadCliente = new System.Windows.Forms.TextBox();
@@ -50,12 +53,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.bt_salir1 = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.bt_modificarProducto = new System.Windows.Forms.Button();
             this.txt_idfacturaProducto = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.txt_descripcionProdicto = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.txt_precioProducto = new System.Windows.Forms.TextBox();
+            this.bt_guardarProducto = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
             this.txt_stockProducto = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -64,17 +70,22 @@
             this.label36 = new System.Windows.Forms.Label();
             this.txt_nombreProducto = new System.Windows.Forms.TextBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.bt_nuevoProducto = new System.Windows.Forms.Button();
             this.dgv_producto = new System.Windows.Forms.DataGridView();
             this.txt_buscarProducto = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.bt_salir2 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.DT_fechaVenta = new System.Windows.Forms.DateTimePicker();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.bt_cancelarVenta = new System.Windows.Forms.Button();
+            this.bt_guardarVenta = new System.Windows.Forms.Button();
             this.txt_totalVenta = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dgv_carritoVenta = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.dgv_buscarproductoVenta = new System.Windows.Forms.DataGridView();
             this.txt_buscarproductoVenta = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -99,11 +110,13 @@
             this.label15 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.bt_salir3 = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.dgv_Proveedor = new System.Windows.Forms.DataGridView();
             this.txt_buscarProveedor = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.bt_modificarProveedor = new System.Windows.Forms.Button();
             this.txt_numeroProveedor = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
             this.txt_celularProveedor = new System.Windows.Forms.TextBox();
@@ -121,25 +134,13 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
+            this.bt_guardarProveedor = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.bt_ModificarCliente = new System.Windows.Forms.Button();
-            this.bt_guardarCliente = new System.Windows.Forms.Button();
-            this.bt_modificarProducto = new System.Windows.Forms.Button();
-            this.bt_guardarProducto = new System.Windows.Forms.Button();
-            this.bt_nuevoProducto = new System.Windows.Forms.Button();
-            this.bt_cancelarVenta = new System.Windows.Forms.Button();
-            this.bt_guardarVenta = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.bt_modificarProveedor = new System.Windows.Forms.Button();
-            this.bt_guardarProveedor = new System.Windows.Forms.Button();
-            this.BT_SALIR = new System.Windows.Forms.Button();
-            this.bt_salir1 = new System.Windows.Forms.Button();
-            this.bt_salir2 = new System.Windows.Forms.Button();
-            this.bt_salir3 = new System.Windows.Forms.Button();
+            this.lbl_user = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -180,6 +181,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.DarkRed;
+            this.tabPage1.Controls.Add(this.lbl_user);
             this.tabPage1.Controls.Add(this.BT_SALIR);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
@@ -190,6 +192,17 @@
             this.tabPage1.Size = new System.Drawing.Size(812, 636);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "CLIENTES";
+            // 
+            // BT_SALIR
+            // 
+            this.BT_SALIR.ForeColor = System.Drawing.Color.Black;
+            this.BT_SALIR.Location = new System.Drawing.Point(728, 6);
+            this.BT_SALIR.Name = "BT_SALIR";
+            this.BT_SALIR.Size = new System.Drawing.Size(75, 23);
+            this.BT_SALIR.TabIndex = 4;
+            this.BT_SALIR.Text = "SALIR";
+            this.BT_SALIR.UseVisualStyleBackColor = true;
+            this.BT_SALIR.Click += new System.EventHandler(this.BT_SALIR_Click);
             // 
             // groupBox2
             // 
@@ -263,6 +276,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS CLIENTE";
             // 
+            // bt_ModificarCliente
+            // 
+            this.bt_ModificarCliente.BackgroundImage = global::WindowsFormsApplication2.Properties.Resources.ResumeRequest;
+            this.bt_ModificarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bt_ModificarCliente.ForeColor = System.Drawing.Color.Black;
+            this.bt_ModificarCliente.Location = new System.Drawing.Point(520, 177);
+            this.bt_ModificarCliente.Name = "bt_ModificarCliente";
+            this.bt_ModificarCliente.Size = new System.Drawing.Size(91, 70);
+            this.bt_ModificarCliente.TabIndex = 15;
+            this.bt_ModificarCliente.Text = "MODIFICAR";
+            this.bt_ModificarCliente.UseVisualStyleBackColor = true;
+            this.bt_ModificarCliente.Click += new System.EventHandler(this.bt_ModificarCliente_Click);
+            // 
             // txt_numeroCasaCliente
             // 
             this.txt_numeroCasaCliente.Location = new System.Drawing.Point(428, 138);
@@ -297,6 +323,19 @@
             this.dTime_Cliente.Name = "dTime_Cliente";
             this.dTime_Cliente.Size = new System.Drawing.Size(213, 20);
             this.dTime_Cliente.TabIndex = 11;
+            // 
+            // bt_guardarCliente
+            // 
+            this.bt_guardarCliente.BackgroundImage = global::WindowsFormsApplication2.Properties.Resources.button_add_100842;
+            this.bt_guardarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bt_guardarCliente.ForeColor = System.Drawing.Color.Black;
+            this.bt_guardarCliente.Location = new System.Drawing.Point(416, 177);
+            this.bt_guardarCliente.Name = "bt_guardarCliente";
+            this.bt_guardarCliente.Size = new System.Drawing.Size(88, 70);
+            this.bt_guardarCliente.TabIndex = 10;
+            this.bt_guardarCliente.Text = "GUARDAR";
+            this.bt_guardarCliente.UseVisualStyleBackColor = true;
+            this.bt_guardarCliente.Click += new System.EventHandler(this.bt_guardarCliente_Click);
             // 
             // txt_rutCliente
             // 
@@ -397,6 +436,17 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "PRODUCTOS";
             // 
+            // bt_salir1
+            // 
+            this.bt_salir1.ForeColor = System.Drawing.Color.Black;
+            this.bt_salir1.Location = new System.Drawing.Point(734, 6);
+            this.bt_salir1.Name = "bt_salir1";
+            this.bt_salir1.Size = new System.Drawing.Size(75, 23);
+            this.bt_salir1.TabIndex = 23;
+            this.bt_salir1.Text = "SALIR";
+            this.bt_salir1.UseVisualStyleBackColor = true;
+            this.bt_salir1.Click += new System.EventHandler(this.bt_salir1_Click);
+            // 
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.bt_modificarProducto);
@@ -420,6 +470,19 @@
             this.groupBox10.TabIndex = 22;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "AGREGAR PRODUCTO";
+            // 
+            // bt_modificarProducto
+            // 
+            this.bt_modificarProducto.BackgroundImage = global::WindowsFormsApplication2.Properties.Resources.ResumeRequest;
+            this.bt_modificarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bt_modificarProducto.ForeColor = System.Drawing.Color.Black;
+            this.bt_modificarProducto.Location = new System.Drawing.Point(533, 196);
+            this.bt_modificarProducto.Name = "bt_modificarProducto";
+            this.bt_modificarProducto.Size = new System.Drawing.Size(83, 76);
+            this.bt_modificarProducto.TabIndex = 35;
+            this.bt_modificarProducto.Text = "MODIFICAR";
+            this.bt_modificarProducto.UseVisualStyleBackColor = true;
+            this.bt_modificarProducto.Click += new System.EventHandler(this.bt_modificarProducto_Click);
             // 
             // txt_idfacturaProducto
             // 
@@ -463,6 +526,20 @@
             this.txt_precioProducto.Name = "txt_precioProducto";
             this.txt_precioProducto.Size = new System.Drawing.Size(172, 20);
             this.txt_precioProducto.TabIndex = 30;
+            // 
+            // bt_guardarProducto
+            // 
+            this.bt_guardarProducto.BackgroundImage = global::WindowsFormsApplication2.Properties.Resources.button_add_100842;
+            this.bt_guardarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bt_guardarProducto.ForeColor = System.Drawing.Color.Black;
+            this.bt_guardarProducto.Location = new System.Drawing.Point(428, 196);
+            this.bt_guardarProducto.Name = "bt_guardarProducto";
+            this.bt_guardarProducto.Size = new System.Drawing.Size(83, 76);
+            this.bt_guardarProducto.TabIndex = 29;
+            this.bt_guardarProducto.Text = "GUARDAR";
+            this.bt_guardarProducto.UseVisualStyleBackColor = true;
+            this.bt_guardarProducto.Visible = false;
+            this.bt_guardarProducto.Click += new System.EventHandler(this.bt_guardarProducto_Click);
             // 
             // label33
             // 
@@ -540,6 +617,18 @@
             this.groupBox9.Text = "BUSCAR PRODUCTO";
             this.groupBox9.Enter += new System.EventHandler(this.groupBox9_Enter);
             // 
+            // bt_nuevoProducto
+            // 
+            this.bt_nuevoProducto.BackgroundImage = global::WindowsFormsApplication2.Properties.Resources.folder_add_icon;
+            this.bt_nuevoProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bt_nuevoProducto.Location = new System.Drawing.Point(551, 19);
+            this.bt_nuevoProducto.Name = "bt_nuevoProducto";
+            this.bt_nuevoProducto.Size = new System.Drawing.Size(93, 52);
+            this.bt_nuevoProducto.TabIndex = 21;
+            this.bt_nuevoProducto.Text = "NUEVO";
+            this.bt_nuevoProducto.UseVisualStyleBackColor = true;
+            this.bt_nuevoProducto.Click += new System.EventHandler(this.bt_nuevoProducto_Click);
+            // 
             // dgv_producto
             // 
             this.dgv_producto.AllowUserToAddRows = false;
@@ -588,6 +677,17 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "VENTA";
             // 
+            // bt_salir2
+            // 
+            this.bt_salir2.ForeColor = System.Drawing.Color.Black;
+            this.bt_salir2.Location = new System.Drawing.Point(734, 6);
+            this.bt_salir2.Name = "bt_salir2";
+            this.bt_salir2.Size = new System.Drawing.Size(75, 23);
+            this.bt_salir2.TabIndex = 17;
+            this.bt_salir2.Text = "SALIR";
+            this.bt_salir2.UseVisualStyleBackColor = true;
+            this.bt_salir2.Click += new System.EventHandler(this.bt_salir2_Click);
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -621,6 +721,33 @@
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "VENTA";
+            // 
+            // bt_cancelarVenta
+            // 
+            this.bt_cancelarVenta.BackgroundImage = global::WindowsFormsApplication2.Properties.Resources.molumen_red_round_error_warning_icon_1969px;
+            this.bt_cancelarVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bt_cancelarVenta.ForeColor = System.Drawing.Color.Black;
+            this.bt_cancelarVenta.Location = new System.Drawing.Point(168, 134);
+            this.bt_cancelarVenta.Name = "bt_cancelarVenta";
+            this.bt_cancelarVenta.Size = new System.Drawing.Size(87, 78);
+            this.bt_cancelarVenta.TabIndex = 6;
+            this.bt_cancelarVenta.Tag = "";
+            this.bt_cancelarVenta.Text = "CANCELAR";
+            this.bt_cancelarVenta.UseVisualStyleBackColor = true;
+            this.bt_cancelarVenta.Click += new System.EventHandler(this.bt_cancelarVenta_Click);
+            // 
+            // bt_guardarVenta
+            // 
+            this.bt_guardarVenta.BackgroundImage = global::WindowsFormsApplication2.Properties.Resources.button_add_100842;
+            this.bt_guardarVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bt_guardarVenta.ForeColor = System.Drawing.Color.Black;
+            this.bt_guardarVenta.Location = new System.Drawing.Point(67, 133);
+            this.bt_guardarVenta.Name = "bt_guardarVenta";
+            this.bt_guardarVenta.Size = new System.Drawing.Size(87, 78);
+            this.bt_guardarVenta.TabIndex = 5;
+            this.bt_guardarVenta.Text = "GUARDAR";
+            this.bt_guardarVenta.UseVisualStyleBackColor = true;
+            this.bt_guardarVenta.Click += new System.EventHandler(this.bt_guardarVenta_Click);
             // 
             // txt_totalVenta
             // 
@@ -668,6 +795,19 @@
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "PRODUCTOS";
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::WindowsFormsApplication2.Properties.Resources.images;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(650, 57);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(87, 88);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "LIMPIAR";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dgv_buscarproductoVenta
             // 
@@ -911,6 +1051,17 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "PROVEEDOR";
             // 
+            // bt_salir3
+            // 
+            this.bt_salir3.ForeColor = System.Drawing.Color.Black;
+            this.bt_salir3.Location = new System.Drawing.Point(734, 3);
+            this.bt_salir3.Name = "bt_salir3";
+            this.bt_salir3.Size = new System.Drawing.Size(75, 23);
+            this.bt_salir3.TabIndex = 26;
+            this.bt_salir3.Text = "SALIR";
+            this.bt_salir3.UseVisualStyleBackColor = true;
+            this.bt_salir3.Click += new System.EventHandler(this.bt_salir3_Click);
+            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.dgv_Proveedor);
@@ -988,6 +1139,19 @@
             this.groupBox8.TabIndex = 14;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "PROVEEDORES";
+            // 
+            // bt_modificarProveedor
+            // 
+            this.bt_modificarProveedor.BackgroundImage = global::WindowsFormsApplication2.Properties.Resources.ResumeRequest;
+            this.bt_modificarProveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bt_modificarProveedor.ForeColor = System.Drawing.Color.Black;
+            this.bt_modificarProveedor.Location = new System.Drawing.Point(528, 238);
+            this.bt_modificarProveedor.Name = "bt_modificarProveedor";
+            this.bt_modificarProveedor.Size = new System.Drawing.Size(97, 74);
+            this.bt_modificarProveedor.TabIndex = 25;
+            this.bt_modificarProveedor.Text = "MODIFICAR";
+            this.bt_modificarProveedor.UseVisualStyleBackColor = true;
+            this.bt_modificarProveedor.Click += new System.EventHandler(this.bt_modificarProveedor_Click);
             // 
             // txt_numeroProveedor
             // 
@@ -1120,6 +1284,19 @@
             this.label25.TabIndex = 9;
             this.label25.Text = "PAIS";
             // 
+            // bt_guardarProveedor
+            // 
+            this.bt_guardarProveedor.BackgroundImage = global::WindowsFormsApplication2.Properties.Resources.button_add_100842;
+            this.bt_guardarProveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bt_guardarProveedor.ForeColor = System.Drawing.Color.Black;
+            this.bt_guardarProveedor.Location = new System.Drawing.Point(425, 238);
+            this.bt_guardarProveedor.Name = "bt_guardarProveedor";
+            this.bt_guardarProveedor.Size = new System.Drawing.Size(97, 74);
+            this.bt_guardarProveedor.TabIndex = 2;
+            this.bt_guardarProveedor.Text = "GUARDAR";
+            this.bt_guardarProveedor.UseVisualStyleBackColor = true;
+            this.bt_guardarProveedor.Click += new System.EventHandler(this.bt_guardarProveedor_Click);
+            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -1165,180 +1342,14 @@
             this.label30.TabIndex = 5;
             this.label30.Text = "CIUDAD";
             // 
-            // bt_ModificarCliente
+            // lbl_user
             // 
-            this.bt_ModificarCliente.BackgroundImage = global::WindowsFormsApplication2.Properties.Resources.ResumeRequest;
-            this.bt_ModificarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bt_ModificarCliente.ForeColor = System.Drawing.Color.Black;
-            this.bt_ModificarCliente.Location = new System.Drawing.Point(520, 177);
-            this.bt_ModificarCliente.Name = "bt_ModificarCliente";
-            this.bt_ModificarCliente.Size = new System.Drawing.Size(91, 70);
-            this.bt_ModificarCliente.TabIndex = 15;
-            this.bt_ModificarCliente.Text = "MODIFICAR";
-            this.bt_ModificarCliente.UseVisualStyleBackColor = true;
-            this.bt_ModificarCliente.Click += new System.EventHandler(this.bt_ModificarCliente_Click);
-            // 
-            // bt_guardarCliente
-            // 
-            this.bt_guardarCliente.BackgroundImage = global::WindowsFormsApplication2.Properties.Resources.button_add_100842;
-            this.bt_guardarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bt_guardarCliente.ForeColor = System.Drawing.Color.Black;
-            this.bt_guardarCliente.Location = new System.Drawing.Point(416, 177);
-            this.bt_guardarCliente.Name = "bt_guardarCliente";
-            this.bt_guardarCliente.Size = new System.Drawing.Size(88, 70);
-            this.bt_guardarCliente.TabIndex = 10;
-            this.bt_guardarCliente.Text = "GUARDAR";
-            this.bt_guardarCliente.UseVisualStyleBackColor = true;
-            this.bt_guardarCliente.Click += new System.EventHandler(this.bt_guardarCliente_Click);
-            // 
-            // bt_modificarProducto
-            // 
-            this.bt_modificarProducto.BackgroundImage = global::WindowsFormsApplication2.Properties.Resources.ResumeRequest;
-            this.bt_modificarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bt_modificarProducto.ForeColor = System.Drawing.Color.Black;
-            this.bt_modificarProducto.Location = new System.Drawing.Point(533, 196);
-            this.bt_modificarProducto.Name = "bt_modificarProducto";
-            this.bt_modificarProducto.Size = new System.Drawing.Size(83, 76);
-            this.bt_modificarProducto.TabIndex = 35;
-            this.bt_modificarProducto.Text = "MODIFICAR";
-            this.bt_modificarProducto.UseVisualStyleBackColor = true;
-            this.bt_modificarProducto.Click += new System.EventHandler(this.bt_modificarProducto_Click);
-            // 
-            // bt_guardarProducto
-            // 
-            this.bt_guardarProducto.BackgroundImage = global::WindowsFormsApplication2.Properties.Resources.button_add_100842;
-            this.bt_guardarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bt_guardarProducto.ForeColor = System.Drawing.Color.Black;
-            this.bt_guardarProducto.Location = new System.Drawing.Point(428, 196);
-            this.bt_guardarProducto.Name = "bt_guardarProducto";
-            this.bt_guardarProducto.Size = new System.Drawing.Size(83, 76);
-            this.bt_guardarProducto.TabIndex = 29;
-            this.bt_guardarProducto.Text = "GUARDAR";
-            this.bt_guardarProducto.UseVisualStyleBackColor = true;
-            this.bt_guardarProducto.Visible = false;
-            this.bt_guardarProducto.Click += new System.EventHandler(this.bt_guardarProducto_Click);
-            // 
-            // bt_nuevoProducto
-            // 
-            this.bt_nuevoProducto.BackgroundImage = global::WindowsFormsApplication2.Properties.Resources.folder_add_icon;
-            this.bt_nuevoProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bt_nuevoProducto.Location = new System.Drawing.Point(551, 19);
-            this.bt_nuevoProducto.Name = "bt_nuevoProducto";
-            this.bt_nuevoProducto.Size = new System.Drawing.Size(93, 52);
-            this.bt_nuevoProducto.TabIndex = 21;
-            this.bt_nuevoProducto.Text = "NUEVO";
-            this.bt_nuevoProducto.UseVisualStyleBackColor = true;
-            this.bt_nuevoProducto.Click += new System.EventHandler(this.bt_nuevoProducto_Click);
-            // 
-            // bt_cancelarVenta
-            // 
-            this.bt_cancelarVenta.BackgroundImage = global::WindowsFormsApplication2.Properties.Resources.molumen_red_round_error_warning_icon_1969px;
-            this.bt_cancelarVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bt_cancelarVenta.ForeColor = System.Drawing.Color.Black;
-            this.bt_cancelarVenta.Location = new System.Drawing.Point(168, 134);
-            this.bt_cancelarVenta.Name = "bt_cancelarVenta";
-            this.bt_cancelarVenta.Size = new System.Drawing.Size(87, 78);
-            this.bt_cancelarVenta.TabIndex = 6;
-            this.bt_cancelarVenta.Tag = "";
-            this.bt_cancelarVenta.Text = "CANCELAR";
-            this.bt_cancelarVenta.UseVisualStyleBackColor = true;
-            this.bt_cancelarVenta.Click += new System.EventHandler(this.bt_cancelarVenta_Click);
-            // 
-            // bt_guardarVenta
-            // 
-            this.bt_guardarVenta.BackgroundImage = global::WindowsFormsApplication2.Properties.Resources.button_add_100842;
-            this.bt_guardarVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bt_guardarVenta.ForeColor = System.Drawing.Color.Black;
-            this.bt_guardarVenta.Location = new System.Drawing.Point(67, 133);
-            this.bt_guardarVenta.Name = "bt_guardarVenta";
-            this.bt_guardarVenta.Size = new System.Drawing.Size(87, 78);
-            this.bt_guardarVenta.TabIndex = 5;
-            this.bt_guardarVenta.Text = "GUARDAR";
-            this.bt_guardarVenta.UseVisualStyleBackColor = true;
-            this.bt_guardarVenta.Click += new System.EventHandler(this.bt_guardarVenta_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::WindowsFormsApplication2.Properties.Resources.images;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(650, 57);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 88);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "LIMPIAR";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // bt_modificarProveedor
-            // 
-            this.bt_modificarProveedor.BackgroundImage = global::WindowsFormsApplication2.Properties.Resources.ResumeRequest;
-            this.bt_modificarProveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bt_modificarProveedor.ForeColor = System.Drawing.Color.Black;
-            this.bt_modificarProveedor.Location = new System.Drawing.Point(528, 238);
-            this.bt_modificarProveedor.Name = "bt_modificarProveedor";
-            this.bt_modificarProveedor.Size = new System.Drawing.Size(97, 74);
-            this.bt_modificarProveedor.TabIndex = 25;
-            this.bt_modificarProveedor.Text = "MODIFICAR";
-            this.bt_modificarProveedor.UseVisualStyleBackColor = true;
-            this.bt_modificarProveedor.Click += new System.EventHandler(this.bt_modificarProveedor_Click);
-            // 
-            // bt_guardarProveedor
-            // 
-            this.bt_guardarProveedor.BackgroundImage = global::WindowsFormsApplication2.Properties.Resources.button_add_100842;
-            this.bt_guardarProveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bt_guardarProveedor.ForeColor = System.Drawing.Color.Black;
-            this.bt_guardarProveedor.Location = new System.Drawing.Point(425, 238);
-            this.bt_guardarProveedor.Name = "bt_guardarProveedor";
-            this.bt_guardarProveedor.Size = new System.Drawing.Size(97, 74);
-            this.bt_guardarProveedor.TabIndex = 2;
-            this.bt_guardarProveedor.Text = "GUARDAR";
-            this.bt_guardarProveedor.UseVisualStyleBackColor = true;
-            this.bt_guardarProveedor.Click += new System.EventHandler(this.bt_guardarProveedor_Click);
-            // 
-            // BT_SALIR
-            // 
-            this.BT_SALIR.ForeColor = System.Drawing.Color.Black;
-            this.BT_SALIR.Location = new System.Drawing.Point(728, 6);
-            this.BT_SALIR.Name = "BT_SALIR";
-            this.BT_SALIR.Size = new System.Drawing.Size(75, 23);
-            this.BT_SALIR.TabIndex = 4;
-            this.BT_SALIR.Text = "SALIR";
-            this.BT_SALIR.UseVisualStyleBackColor = true;
-            this.BT_SALIR.Click += new System.EventHandler(this.BT_SALIR_Click);
-            // 
-            // bt_salir1
-            // 
-            this.bt_salir1.ForeColor = System.Drawing.Color.Black;
-            this.bt_salir1.Location = new System.Drawing.Point(734, 6);
-            this.bt_salir1.Name = "bt_salir1";
-            this.bt_salir1.Size = new System.Drawing.Size(75, 23);
-            this.bt_salir1.TabIndex = 23;
-            this.bt_salir1.Text = "SALIR";
-            this.bt_salir1.UseVisualStyleBackColor = true;
-            this.bt_salir1.Click += new System.EventHandler(this.bt_salir1_Click);
-            // 
-            // bt_salir2
-            // 
-            this.bt_salir2.ForeColor = System.Drawing.Color.Black;
-            this.bt_salir2.Location = new System.Drawing.Point(734, 6);
-            this.bt_salir2.Name = "bt_salir2";
-            this.bt_salir2.Size = new System.Drawing.Size(75, 23);
-            this.bt_salir2.TabIndex = 17;
-            this.bt_salir2.Text = "SALIR";
-            this.bt_salir2.UseVisualStyleBackColor = true;
-            this.bt_salir2.Click += new System.EventHandler(this.bt_salir2_Click);
-            // 
-            // bt_salir3
-            // 
-            this.bt_salir3.ForeColor = System.Drawing.Color.Black;
-            this.bt_salir3.Location = new System.Drawing.Point(734, 3);
-            this.bt_salir3.Name = "bt_salir3";
-            this.bt_salir3.Size = new System.Drawing.Size(75, 23);
-            this.bt_salir3.TabIndex = 26;
-            this.bt_salir3.Text = "SALIR";
-            this.bt_salir3.UseVisualStyleBackColor = true;
-            this.bt_salir3.Click += new System.EventHandler(this.bt_salir3_Click);
+            this.lbl_user.AutoSize = true;
+            this.lbl_user.Location = new System.Drawing.Point(8, 16);
+            this.lbl_user.Name = "lbl_user";
+            this.lbl_user.Size = new System.Drawing.Size(41, 13);
+            this.lbl_user.TabIndex = 1;
+            this.lbl_user.Text = "label18";
             // 
             // Form1
             // 
@@ -1351,6 +1362,7 @@
             this.Text = "ElfmanStrauss";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Clinete)).EndInit();
@@ -1498,6 +1510,7 @@
         private System.Windows.Forms.Button bt_salir1;
         private System.Windows.Forms.Button bt_salir2;
         private System.Windows.Forms.Button bt_salir3;
+        public System.Windows.Forms.Label lbl_user;
     }
 }
 
