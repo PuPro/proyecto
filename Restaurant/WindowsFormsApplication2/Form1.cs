@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 namespace WindowsFormsApplication2
 {
     public partial class Form1 : Form
@@ -758,15 +759,33 @@ namespace WindowsFormsApplication2
 
         public void stock_producto()
         {
-          
             SqlConnection CN = new SqlConnection();
             CN.ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=ElfmanStrauss;Integrated Security=True";
             DataTable dt = new DataTable();
+            DataTable dt2 = new DataTable();
             CN.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("select nombre, stock from producto where stock <= 10", CN);
-            sda.Fill(dt);
-            MessageBox.Show(dt.Rows[0][0].ToString()+ " " + dt.Rows[0][1].ToString());
+            SqlDataAdapter sda1 = new SqlDataAdapter("select nombre, stock from producto where stock <= 10", CN);
+            sda1.Fill(dt);
+            SqlDataAdapter sda2 = new SqlDataAdapter("select COUNT (*) from producto where stock <= 10", CN);
+            sda2.Fill(dt2);
+
+            string lista = " ";
+
+            for (int i = 0; i < Convert.ToInt32(dt2.Rows[0][0]); i++)
+            {
+                lista += dt.Rows[i][0].ToString() + " " + dt.Rows[i][1].ToString() +"\n ";
+            }
+
             CN.Close();
+
+            MessageBox.Show(lista, "QUEDA POCO STOCK ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+              
+                
+     
+            }
+
+
 
 
 
@@ -796,4 +815,4 @@ namespace WindowsFormsApplication2
 
 
 
-}
+
