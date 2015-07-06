@@ -19,7 +19,7 @@ namespace WindowsFormsApplication2
             InitializeComponent();
             cmb_provedorProductos();
             cmb_vendedorVentas();
-            stock_producto();
+           
 
 
             
@@ -758,50 +758,7 @@ namespace WindowsFormsApplication2
         }
 
 
-        public void stock_producto()
-        {
-            SqlConnection CN = new SqlConnection();
-            CN.ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=ElfmanStrauss;Integrated Security=True";
-            DataTable dt = new DataTable();
-            DataTable dt2 = new DataTable();
-            DataTable dt3 = new DataTable();
-            CN.Open();
-            SqlDataAdapter sda1 = new SqlDataAdapter("select nombre, stock from producto where stock <= 10", CN);
-            sda1.Fill(dt);
-            SqlDataAdapter sda2 = new SqlDataAdapter("select COUNT (*) from producto where stock <= 10", CN);
-            sda2.Fill(dt2);
-            SqlDataAdapter sda3 = new SqlDataAdapter("select nombre, apellido from usuario where usuario = 'arubio'" , CN);
-            sda3.Fill(dt3);
-
-
-            string lista = " ";
-
-            for (int i = 0; i < Convert.ToInt32(dt2.Rows[0][0]); i++)
-            {
-                lista += dt.Rows[i][0].ToString() + " " + dt.Rows[i][1].ToString() + "\n ";
-            }
-
-            CN.Close();
-
-            MessageBox.Show(lista, "QUEDA POCO STOCK ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
-
-            string dato = lbl_usser.Text;
-            string hora;
-            string fechas;
-            string nombre = " ";
-
-            hora = DateTime.Now.ToString("dd/MM/yyyy");
-            fechas = DateTime.Now.ToString("hh:mm:ss");
-            nombre += dt3.Rows[0][0].ToString() + " " + dt3.Rows[0][1].ToString();
-
-            Gestion reporte = new Gestion();
-            reporte.agregar_reporte(fechas, hora, nombre);
-
-            
-
-        }
+        
 
       
 

@@ -53,7 +53,15 @@ namespace WindowsFormsApplication2
 
                  MessageBox.Show(usuarioOB.Mensaje, "Loguin...");
 
+
+                //enviar ide al la ventana inicioreporte y abrir la ventana 
+                 InicioReporte IR = new InicioReporte();
+                 IR.txt_user_reporte.Text = txt_usuario.Text;
+                 IR.Show();
+
                  cerrar = 1;
+
+
                
             }
             else
