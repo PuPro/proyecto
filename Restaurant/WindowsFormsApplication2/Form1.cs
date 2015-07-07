@@ -317,7 +317,7 @@ namespace WindowsFormsApplication2
 
 
 
-                    if (Agregar.agregar_productos(txt_nombreProducto.Text, txt_stockProducto.Text, cmb_provedorProducto.Text, Convert.ToInt32(txt_precioProducto.Text), txt_idfacturaProducto.Text, txt_descripcionProdicto.Text) > 0)
+                    if (Agregar.agregar_productos(txt_nombreProducto.Text, Convert.ToInt32(txt_stockProducto.Text), cmb_provedorProducto.Text, Convert.ToInt32(txt_precioProducto.Text), txt_idfacturaProducto.Text, txt_descripcionProdicto.Text) > 0)
                     {
 
 
@@ -595,10 +595,12 @@ namespace WindowsFormsApplication2
 
         //enviar datos a dgv carrito
         int total = 0;
-
+        int cont = 0;
+       string listaventa1 = " ";
+       string listaventa2 = " ";
         private void dgv_buscarproductoVenta_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-
+            cont = cont + 1;
 
             ID_productoVenta = dgv_buscarproductoVenta.Rows[e.RowIndex].Cells[0].Value.ToString();
             nombreVenta = dgv_buscarproductoVenta.Rows[e.RowIndex].Cells[1].Value.ToString();
@@ -609,34 +611,37 @@ namespace WindowsFormsApplication2
             descripcionVenta = dgv_buscarproductoVenta.Rows[e.RowIndex].Cells[6].Value.ToString();
 
 
-            DataTable dt = new DataTable(); //creas una tabla 
-            dt.Columns.Add("ID_producto"); //le creas las columnas 
-            dt.Columns.Add("nombre");
-            dt.Columns.Add("precio");
-            DataRow row = dt.NewRow(); //creas un registro 
-            row["ID_producto"] = ID_productoVenta; //Le añadres un valor 
-            row["nombre"] = nombreVenta;
-            row["precio"] = precioVenta;
-            dt.Rows.Add(row); //añades el registro a la tabla 
-            dgv_carritoVenta.DataSource = dt; //añades la tabla al datagrid 
-            dgv_carritoVenta.Update(); //actualizas 
+            //DataTable dt = new DataTable(); //creas una tabla 
+            //dt.Columns.Add("ID_producto"); //le creas las columnas 
+            //dt.Columns.Add("nombre");
+            //dt.Columns.Add("precio");
+            //DataRow row = dt.NewRow(); //creas un registro 
+            //row["ID_producto"] = ID_productoVenta; //Le añadres un valor 
+            //row["nombre"] = nombreVenta;
+            //row["precio"] = precioVenta;
+            //dt.Rows.Add(row); //añades el registro a la tabla 
+            //dgv_carritoVenta.DataSource = dt; //añades la tabla al datagrid 
+            //dgv_carritoVenta.Update(); //actualizas 
 
+            lbox_LIstaventas.Items.Add(ID_productoVenta + " " + nombreVenta + " " + precioVenta + "\n ");
+            listaventa1 += ID_productoVenta + "\n ";
+            listaventa2 += nombreVenta + "\n ";
 
-
+            
+           
             total = total + Convert.ToInt32(precioVenta);
 
             txt_totalVenta.Text = Convert.ToString(total);
 
-
-
-
         }
+
+
         //agregar venta (guardar en bdt)
         private void bt_guardarVenta_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Estas seguro que desas agregar", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-
+                //cargar hora actual de la venta 
                 string hora;
                 Timer timer1 = new Timer();
                 timer1.Start();
@@ -649,13 +654,24 @@ namespace WindowsFormsApplication2
                     Gestion Agregar = new Gestion();
 
 
-
+                    //enviar informacion de la venta a la bdt
                     if (Agregar.agregar_venta(hora, DT_fechaVenta.Text, Convert.ToInt32(txt_idvendedorVenta.Text), Convert.ToInt32(txt_idclienteVenta.Text), Convert.ToInt32(txt_totalVenta.Text)) > 0)
                     {
+                        
 
+
+
+                        for (int i = 0; i < cont; i++)
+			{
+
+                Agregar.disminuir_Stock(Convert.ToUInt32(listaventa1), listaventa2[0].ToString());
+
+
+			}
+                        
 
                         MessageBox.Show("VENTA REALIZADA Exitosamente ...");
-
+                        //abrir ventana de reporte 
                         reporte rep = new reporte();
                         rep.Show();
 
@@ -675,13 +691,13 @@ namespace WindowsFormsApplication2
             }
 
         }
-
+        //boton cancelar venta
         private void bt_cancelarVenta_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Estas seguro que desas cancelar la venta...", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
 
-                dgv_carritoVenta.DataSource = null;
+                lbox_LIstaventas.Items.Clear();
                 txt_totalVenta.Text = null;
                 txt_buscarproductoVenta.Text = null;
                 dgv_buscarproductoVenta.DataSource = null;
@@ -696,7 +712,7 @@ namespace WindowsFormsApplication2
             }
 
         }
-
+        // ----------------------------------------botones salir-------------------------------------------------
         private void BT_SALIR_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("cerrar sesión ...", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

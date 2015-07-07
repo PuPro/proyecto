@@ -200,7 +200,7 @@ namespace WindowsFormsApplication2
         //-----------------------------------------------------------------------------------------------------
 
         //agregar producto a la base de datos
-        public int agregar_productos(string nombre, string stock, string ID_proveedor, int precio, string ID_factura, string descripcion)
+        public int agregar_productos(string nombre, int stock, string ID_proveedor, int precio, string ID_factura, string descripcion)
         {
             try
             {
@@ -456,6 +456,38 @@ namespace WindowsFormsApplication2
                 return -1;
             }
         }
+
+        //------------------disminuir Stock-----------------------------
+
+
+
+        public int disminuir_Stock(int ID_producto, string nombre)
+        {
+            try
+            {
+                connBD.CrearConexion(General.Server, General.DataBase, General.User, General.Pass);
+                SqlCommand cmd = new SqlCommand("DescontarStock", connBD.con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                // agregar parametros que recibe como string
+                cmd.Parameters.AddWithValue("@ID_producto", ID_producto);
+                cmd.Parameters.AddWithValue("@nombre", nombre);
+               
+
+                cmd.ExecuteNonQuery();
+                connBD.con.Close();
+                return 1;
+            }
+            catch (Exception)
+            {
+
+                return -1;
+            }
+        }
+
+
+
+
 
 
 

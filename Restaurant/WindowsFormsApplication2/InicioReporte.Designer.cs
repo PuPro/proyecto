@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_listaStock = new System.Windows.Forms.TextBox();
             this.bt_guardar_reporte = new System.Windows.Forms.Button();
             this.txt_user_reporte = new System.Windows.Forms.TextBox();
+            this.lbox_reporteStock = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -45,24 +45,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Listado de stock....";
             // 
-            // txt_listaStock
-            // 
-            this.txt_listaStock.Enabled = false;
-            this.txt_listaStock.Location = new System.Drawing.Point(91, 75);
-            this.txt_listaStock.Multiline = true;
-            this.txt_listaStock.Name = "txt_listaStock";
-            this.txt_listaStock.Size = new System.Drawing.Size(219, 109);
-            this.txt_listaStock.TabIndex = 1;
-            // 
             // bt_guardar_reporte
             // 
-            this.bt_guardar_reporte.ForeColor = System.Drawing.Color.White;
-            this.bt_guardar_reporte.Location = new System.Drawing.Point(177, 204);
+            this.bt_guardar_reporte.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.bt_guardar_reporte.ForeColor = System.Drawing.Color.Black;
+            this.bt_guardar_reporte.Location = new System.Drawing.Point(188, 201);
             this.bt_guardar_reporte.Name = "bt_guardar_reporte";
             this.bt_guardar_reporte.Size = new System.Drawing.Size(133, 35);
             this.bt_guardar_reporte.TabIndex = 2;
             this.bt_guardar_reporte.Text = "Guardar";
-            this.bt_guardar_reporte.UseVisualStyleBackColor = true;
+            this.bt_guardar_reporte.UseVisualStyleBackColor = false;
             this.bt_guardar_reporte.Click += new System.EventHandler(this.bt_guardar_reporte_Click);
             // 
             // txt_user_reporte
@@ -74,15 +66,24 @@
             this.txt_user_reporte.TabIndex = 3;
             this.txt_user_reporte.Visible = false;
             // 
+            // lbox_reporteStock
+            // 
+            this.lbox_reporteStock.Enabled = false;
+            this.lbox_reporteStock.FormattingEnabled = true;
+            this.lbox_reporteStock.Location = new System.Drawing.Point(76, 60);
+            this.lbox_reporteStock.Name = "lbox_reporteStock";
+            this.lbox_reporteStock.Size = new System.Drawing.Size(245, 121);
+            this.lbox_reporteStock.TabIndex = 4;
+            // 
             // InicioReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(420, 281);
+            this.Controls.Add(this.lbox_reporteStock);
             this.Controls.Add(this.txt_user_reporte);
             this.Controls.Add(this.bt_guardar_reporte);
-            this.Controls.Add(this.txt_listaStock);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "InicioReporte";
@@ -95,8 +96,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_listaStock;
         private System.Windows.Forms.Button bt_guardar_reporte;
         public System.Windows.Forms.TextBox txt_user_reporte;
+        private System.Windows.Forms.ListBox lbox_reporteStock;
     }
 }

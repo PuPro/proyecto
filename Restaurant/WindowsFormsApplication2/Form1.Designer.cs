@@ -79,11 +79,11 @@
             this.label16 = new System.Windows.Forms.Label();
             this.DT_fechaVenta = new System.Windows.Forms.DateTimePicker();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lbox_LIstaventas = new System.Windows.Forms.ListBox();
             this.bt_cancelarVenta = new System.Windows.Forms.Button();
             this.bt_guardarVenta = new System.Windows.Forms.Button();
             this.txt_totalVenta = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.dgv_carritoVenta = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.dgv_buscarproductoVenta = new System.Windows.Forms.DataGridView();
@@ -151,7 +151,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_producto)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_carritoVenta)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_buscarproductoVenta)).BeginInit();
             this.groupBox5.SuspendLayout();
@@ -706,11 +705,11 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.lbox_LIstaventas);
             this.groupBox4.Controls.Add(this.bt_cancelarVenta);
             this.groupBox4.Controls.Add(this.bt_guardarVenta);
             this.groupBox4.Controls.Add(this.txt_totalVenta);
             this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Controls.Add(this.dgv_carritoVenta);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.Black;
             this.groupBox4.Location = new System.Drawing.Point(18, 396);
@@ -719,6 +718,14 @@
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "VENTA";
+            // 
+            // lbox_LIstaventas
+            // 
+            this.lbox_LIstaventas.FormattingEnabled = true;
+            this.lbox_LIstaventas.Location = new System.Drawing.Point(67, 26);
+            this.lbox_LIstaventas.Name = "lbox_LIstaventas";
+            this.lbox_LIstaventas.Size = new System.Drawing.Size(671, 95);
+            this.lbox_LIstaventas.TabIndex = 7;
             // 
             // bt_cancelarVenta
             // 
@@ -768,17 +775,6 @@
             this.label10.TabIndex = 2;
             this.label10.Text = "TOTAL VENTA";
             // 
-            // dgv_carritoVenta
-            // 
-            this.dgv_carritoVenta.AllowUserToAddRows = false;
-            this.dgv_carritoVenta.AllowUserToDeleteRows = false;
-            this.dgv_carritoVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_carritoVenta.Location = new System.Drawing.Point(67, 35);
-            this.dgv_carritoVenta.Name = "dgv_carritoVenta";
-            this.dgv_carritoVenta.ReadOnly = true;
-            this.dgv_carritoVenta.Size = new System.Drawing.Size(590, 86);
-            this.dgv_carritoVenta.TabIndex = 0;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.button3);
@@ -809,9 +805,12 @@
             // 
             // dgv_buscarproductoVenta
             // 
+            this.dgv_buscarproductoVenta.AllowUserToAddRows = false;
+            this.dgv_buscarproductoVenta.AllowUserToDeleteRows = false;
             this.dgv_buscarproductoVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_buscarproductoVenta.Location = new System.Drawing.Point(39, 57);
             this.dgv_buscarproductoVenta.Name = "dgv_buscarproductoVenta";
+            this.dgv_buscarproductoVenta.ReadOnly = true;
             this.dgv_buscarproductoVenta.Size = new System.Drawing.Size(604, 88);
             this.dgv_buscarproductoVenta.TabIndex = 11;
             this.dgv_buscarproductoVenta.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_buscarproductoVenta_CellMouseDoubleClick);
@@ -1366,7 +1365,6 @@
             this.tabPage3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_carritoVenta)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_buscarproductoVenta)).EndInit();
@@ -1417,7 +1415,6 @@
         private System.Windows.Forms.Button bt_guardarVenta;
         private System.Windows.Forms.TextBox txt_totalVenta;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridView dgv_carritoVenta;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dgv_buscarproductoVenta;
@@ -1498,6 +1495,7 @@
         private System.Windows.Forms.Button bt_salir1;
         private System.Windows.Forms.Button bt_salir2;
         private System.Windows.Forms.Button bt_salir3;
+        private System.Windows.Forms.ListBox lbox_LIstaventas;
     }
 }
 

@@ -36,16 +36,18 @@ namespace WindowsFormsApplication2
             SqlDataAdapter sda2 = new SqlDataAdapter("select COUNT (*) from producto where stock <= 10", CN);
             sda2.Fill(dt2);
 
-            string lista = " ";
+          
 
 
             for (int i = 0; i < Convert.ToInt32(dt2.Rows[0][0]); i++)
             {
-                lista += dt.Rows[i][0].ToString() + " " + dt.Rows[i][1].ToString() + "\n ";
+
+                lbox_reporteStock.Items.Add(dt.Rows[i][0].ToString() + " " + dt.Rows[i][1].ToString() + "\n ");
+               
 
 
             }
-            txt_listaStock.Text = lista;
+            
 
             CN.Close();
         }
