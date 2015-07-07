@@ -30,34 +30,35 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.ElfmanStraussDataSet = new WindowsFormsApplication2.ElfmanStraussDataSet();
             this.ventaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ElfmanStraussDataSet = new WindowsFormsApplication2.ElfmanStraussDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ventaTableAdapter = new WindowsFormsApplication2.ElfmanStraussDataSetTableAdapters.ventaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.ElfmanStraussDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ElfmanStraussDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // ventaBindingSource
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.ventaBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApplication2.Report1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 12);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(711, 285);
-            this.reportViewer1.TabIndex = 0;
+            this.ventaBindingSource.DataMember = "venta";
+            this.ventaBindingSource.DataSource = this.ElfmanStraussDataSet;
             // 
             // ElfmanStraussDataSet
             // 
             this.ElfmanStraussDataSet.DataSetName = "ElfmanStraussDataSet";
             this.ElfmanStraussDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // ventaBindingSource
+            // reportViewer1
             // 
-            this.ventaBindingSource.DataMember = "venta";
-            this.ventaBindingSource.DataSource = this.ElfmanStraussDataSet;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.ventaBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApplication2.Report1.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(713, 294);
+            this.reportViewer1.TabIndex = 0;
             // 
             // ventaTableAdapter
             // 
@@ -68,13 +69,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
-            this.ClientSize = new System.Drawing.Size(735, 320);
+            this.ClientSize = new System.Drawing.Size(713, 294);
             this.Controls.Add(this.reportViewer1);
             this.Name = "reporte";
             this.Text = "reporte";
             this.Load += new System.EventHandler(this.reporte_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ElfmanStraussDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ElfmanStraussDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

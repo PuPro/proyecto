@@ -400,8 +400,6 @@ namespace WindowsFormsApplication2
 
                 // agregar parametros que recibe como string
 
-
-
                 cmd.Parameters.AddWithValue("@hora", hora);
                 cmd.Parameters.AddWithValue("@fecha", fecha);
                 cmd.Parameters.AddWithValue("@ID_usuario", ID_usuario);
@@ -461,7 +459,7 @@ namespace WindowsFormsApplication2
 
 
 
-        public int disminuir_Stock(int ID_producto, string nombre)
+        public int disminuir_Stock(int ID_producto)
         {
             try
             {
@@ -469,9 +467,8 @@ namespace WindowsFormsApplication2
                 SqlCommand cmd = new SqlCommand("DescontarStock", connBD.con);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                // agregar parametros que recibe como string
+                // agregar parametros que recibe como int
                 cmd.Parameters.AddWithValue("@ID_producto", ID_producto);
-                cmd.Parameters.AddWithValue("@nombre", nombre);
                
 
                 cmd.ExecuteNonQuery();

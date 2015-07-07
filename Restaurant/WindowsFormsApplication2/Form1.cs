@@ -19,10 +19,10 @@ namespace WindowsFormsApplication2
             InitializeComponent();
             cmb_provedorProductos();
             cmb_vendedorVentas();
-           
 
 
-            
+
+
         }
 
         private void groupBox9_Enter(object sender, EventArgs e)
@@ -596,8 +596,7 @@ namespace WindowsFormsApplication2
         //enviar datos a dgv carrito
         int total = 0;
         int cont = 0;
-       string listaventa1 = " ";
-       string listaventa2 = " ";
+        List<string> ListaIDventa = new List<string>();
         private void dgv_buscarproductoVenta_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             cont = cont + 1;
@@ -624,11 +623,9 @@ namespace WindowsFormsApplication2
             //dgv_carritoVenta.Update(); //actualizas 
 
             lbox_LIstaventas.Items.Add(ID_productoVenta + " " + nombreVenta + " " + precioVenta + "\n ");
-            listaventa1 += ID_productoVenta + "\n ";
-            listaventa2 += nombreVenta + "\n ";
 
-            
-           
+            ListaIDventa.Add(ID_productoVenta);
+
             total = total + Convert.ToInt32(precioVenta);
 
             txt_totalVenta.Text = Convert.ToString(total);
@@ -642,12 +639,8 @@ namespace WindowsFormsApplication2
             if (MessageBox.Show("Estas seguro que desas agregar", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 //cargar hora actual de la venta 
-                string hora;
-                Timer timer1 = new Timer();
-                timer1.Start();
-
-
-                hora = DateTime.Now.ToLongTimeString();
+                string horaVenta;
+                horaVenta = DateTime.Now.ToString("hh:mm:ss");
 
                 try
                 {
@@ -655,25 +648,40 @@ namespace WindowsFormsApplication2
 
 
                     //enviar informacion de la venta a la bdt
-                    if (Agregar.agregar_venta(hora, DT_fechaVenta.Text, Convert.ToInt32(txt_idvendedorVenta.Text), Convert.ToInt32(txt_idclienteVenta.Text), Convert.ToInt32(txt_totalVenta.Text)) > 0)
+                    if (Agregar.agregar_venta(horaVenta, DT_fechaVenta.Text, Convert.ToInt32(txt_idvendedorVenta.Text), Convert.ToInt32(txt_idclienteVenta.Text), Convert.ToInt32(txt_totalVenta.Text)) > 0)
                     {
-                        
+
 
 
 
                         for (int i = 0; i < cont; i++)
-			{
+                        {
 
-                Agregar.disminuir_Stock(Convert.ToUInt32(listaventa1), listaventa2[0].ToString());
+                            Agregar.disminuir_Stock(Convert.ToInt32(ListaIDventa[i]));
+                            MessageBox.Show(ListaIDventa[i]);
 
-
-			}
-                        
+                        }
 
                         MessageBox.Show("VENTA REALIZADA Exitosamente ...");
                         //abrir ventana de reporte 
                         reporte rep = new reporte();
                         rep.Show();
+
+                        ListaIDventa.Clear();
+                        lbox_LIstaventas.Items.Clear();
+                        txt_totalVenta.Text = null;
+                        txt_buscarproductoVenta.Text = null;
+                        dgv_buscarproductoVenta.DataSource = null;
+                        txt_apellidoclienteVenta.Text = null;
+                        txt_nombreclienteVenta.Text = null;
+                        txt_idclienteVenta.Text = null;
+                        txt_rutclienteVenta.Text = null;
+                        txt_rutvendedorVenta.Text = null;
+                        txt_nombrevendedorVenta.Text = null;
+                        txt_idvendedorVenta.Text = null;
+
+
+
 
                     }
                     else
@@ -696,7 +704,7 @@ namespace WindowsFormsApplication2
         {
             if (MessageBox.Show("Estas seguro que desas cancelar la venta...", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-
+                ListaIDventa.Clear();
                 lbox_LIstaventas.Items.Clear();
                 txt_totalVenta.Text = null;
                 txt_buscarproductoVenta.Text = null;
@@ -774,13 +782,6 @@ namespace WindowsFormsApplication2
         }
 
 
-        
-
-      
-
-            
-
-        
 
 
 
@@ -793,10 +794,17 @@ namespace WindowsFormsApplication2
 
 
 
-        }
+
+
+
 
 
 
 
     }
+
+
+
+
+}
 

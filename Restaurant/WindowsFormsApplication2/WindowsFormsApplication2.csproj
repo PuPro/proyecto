@@ -147,7 +147,6 @@
     </None>
     <None Include="ElfmanStraussDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ElfmanStraussDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="ElfmanStraussDataSet.xss">
