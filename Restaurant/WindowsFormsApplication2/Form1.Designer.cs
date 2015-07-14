@@ -756,6 +756,7 @@
             // 
             // txt_totalVenta
             // 
+            this.txt_totalVenta.Enabled = false;
             this.txt_totalVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_totalVenta.Location = new System.Drawing.Point(582, 148);
             this.txt_totalVenta.Multiline = true;

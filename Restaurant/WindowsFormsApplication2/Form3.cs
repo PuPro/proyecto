@@ -20,6 +20,41 @@ namespace WindowsFormsApplication2
         //agregar usuario
         private void bt_guardarUsuario_Click(object sender, EventArgs e)
         {
+
+
+            if (txt_nombreUsuario.Text == "")
+            {
+
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_apellidoUsuario.Text == "")
+            {
+
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txtusuarioUsuario.Text == "")
+            {
+
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_contraseñaUsuario.Text == "")
+            {
+
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_rutUsuario.Text == "")
+            {
+
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }
+            
+            
+            
+            
+            
+
+
             if (MessageBox.Show("Estas seguro que desas agregar", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
@@ -91,6 +126,35 @@ namespace WindowsFormsApplication2
         //envia informacion para modificar el usuario
         private void bt_modificarUsuario_Click(object sender, EventArgs e)
         {
+
+
+
+            if (txt_nombreUsuario.Text == "")
+            {
+
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_apellidoUsuario.Text == "")
+            {
+
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txtusuarioUsuario.Text == "")
+            {
+
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_contraseñaUsuario.Text == "")
+            {
+
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_rutUsuario.Text == "")
+            {
+
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }
             if (MessageBox.Show("Estas seguro que desas modificar", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
 
@@ -124,6 +188,38 @@ namespace WindowsFormsApplication2
         //envia la ide del usuario que quieres eliminar 
         private void bt_eliminarUsuario_Click(object sender, EventArgs e)
         {
+
+
+
+            if (txt_nombreUsuario.Text == "")
+            {
+
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_apellidoUsuario.Text == "")
+            {
+
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txtusuarioUsuario.Text == "")
+            {
+
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_contraseñaUsuario.Text == "")
+            {
+
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_rutUsuario.Text == "")
+            {
+
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }
+
+
+
             if (MessageBox.Show("Estas seguro que desas eliminar", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                

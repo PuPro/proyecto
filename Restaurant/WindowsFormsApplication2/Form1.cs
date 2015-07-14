@@ -43,6 +43,54 @@ namespace WindowsFormsApplication2
         // agregar cliente 
         private void bt_guardarCliente_Click(object sender, EventArgs e)
         {
+
+
+            if (txt_nombreCliente.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }
+
+
+            if (txt_apellidoCliente.Text == "")
+            {
+
+                 MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }
+
+            if (txt_rutCliente.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }
+
+             if (txt_ciudadCliente.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }
+             if (txt_direccionCliente.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }
+
+             //if (//dTime_Cliente.Text = fhecha;)
+             //{
+             //    MessageBox.Show("Debe llenar todos los campos");
+             //    return;
+             //}
+
+
+             if (txt_numeroCasaCliente.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }
+            
+            
+
             if (MessageBox.Show("Estas seguro que desas agregar", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
@@ -121,6 +169,52 @@ namespace WindowsFormsApplication2
 
         private void bt_ModificarCliente_Click(object sender, EventArgs e)
         {
+            if (txt_nombreCliente.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }
+
+
+            if (txt_apellidoCliente.Text == "")
+            {
+
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }
+
+            if (txt_rutCliente.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }
+
+            if (txt_ciudadCliente.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }
+            if (txt_direccionCliente.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }
+
+            //if (//dTime_Cliente.Text = fhecha;)
+            //{
+            //    MessageBox.Show("Debe llenar todos los campos");
+            //    return;
+            //}
+
+
+            if (txt_numeroCasaCliente.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }
+
+
+
             if (MessageBox.Show("Estas seguro que desas modificar", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
@@ -159,6 +253,63 @@ namespace WindowsFormsApplication2
         //agregar proveedor
         private void bt_guardarProveedor_Click(object sender, EventArgs e)
         {
+            if (txt_nombreProveedor.Text =="")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }
+              if (txt_contactoProveedor.Text =="")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }  if (txt_cargoProveedor.Text =="")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }  if (txt_direccionProveedor.Text =="")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }  if (txt_numeroProveedor.Text =="")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }  if (txt_ciudadProveedor.Text =="")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }  if (txt_provinciaProveedor.Text =="")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }  if (txt_paisProveedor.Text =="")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }  if (  txt_telefonoProveedor.Text =="")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }  if (txt_celularProveedor.Text =="")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_sitiowebProveedor.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }
+            
+            
+            
+            
+          
+            
+            
+
+
+
+
             if (MessageBox.Show("Estas seguro que desas agregar", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
@@ -246,6 +397,54 @@ namespace WindowsFormsApplication2
         // envia datos para modificar proveedores
         private void bt_modificarProveedor_Click(object sender, EventArgs e)
         {
+            if (txt_nombreProveedor.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }
+            if (txt_contactoProveedor.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_cargoProveedor.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_direccionProveedor.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_numeroProveedor.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_ciudadProveedor.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_provinciaProveedor.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_paisProveedor.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_telefonoProveedor.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_celularProveedor.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_sitiowebProveedor.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            }
+            
+
             if (MessageBox.Show("Estas seguro que desas modificar", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
@@ -307,6 +506,39 @@ namespace WindowsFormsApplication2
 
         private void bt_guardarProducto_Click(object sender, EventArgs e)
         {
+            if (txt_nombreProducto.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_stockProducto.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (cmb_provedorProducto.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_precioProducto.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_idfacturaProducto.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_descripcionProdicto.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } 
+
+            
+            
+            
+            
+            
+            
+
 
             if (MessageBox.Show("Estas seguro que desas agregar", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -423,6 +655,32 @@ namespace WindowsFormsApplication2
         //envia los datos para modificar productos
         private void bt_modificarProducto_Click(object sender, EventArgs e)
         {
+            if (txt_nombreProducto.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_stockProducto.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (cmb_provedorProducto.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_precioProducto.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_idfacturaProducto.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } if (txt_descripcionProdicto.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+                return;
+            } 
+
             if (MessageBox.Show("Estas seguro que desas modificar", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
@@ -636,6 +894,21 @@ namespace WindowsFormsApplication2
         //agregar venta (guardar en bdt)
         private void bt_guardarVenta_Click(object sender, EventArgs e)
         {
+            if (cmb_rutvendedorVenta.Text == "")
+            {
+
+                MessageBox.Show("seleccione vendedor");
+                return;
+            }
+
+            if (txt_rutclienteVenta.Text == "")
+            {
+
+                MessageBox.Show("agregar cliente");
+                return;
+            }
+
+
             if (MessageBox.Show("Estas seguro que desas agregar", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 //cargar hora actual de la venta 
