@@ -658,7 +658,7 @@ namespace WindowsFormsApplication2
                         {
 
                             Agregar.disminuir_Stock(Convert.ToInt32(ListaIDventa[i]));
-                            MessageBox.Show(ListaIDventa[i]);
+                            //MessageBox.Show(ListaIDventa[i]);
 
                         }
 
