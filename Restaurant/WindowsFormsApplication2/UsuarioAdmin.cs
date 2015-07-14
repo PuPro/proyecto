@@ -51,9 +51,11 @@ namespace WindowsFormsApplication2
            if (reg.Read())
            {
 
+
+
                resultado = true;
                this.mensaje = "Bienvenido... Datos Corectos...";
-
+               
                Form3 fr = new Form3();
                fr.Show();
 

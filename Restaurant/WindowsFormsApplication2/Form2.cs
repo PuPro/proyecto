@@ -69,6 +69,7 @@ namespace WindowsFormsApplication2
 
                 MessageBox.Show(usuarioOB.Mensaje, "ERROR...");
 
+              
                 
                 cerrar = 0;
 
